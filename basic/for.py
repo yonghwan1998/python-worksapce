@@ -23,3 +23,19 @@ people = ["iron", "ttw", "tree"]
 
 for customer in people:
     print(f"{customer}, coffee")
+
+print("================================================")
+
+students = [1, 2, 3, 4, 5]
+print(students)
+
+students = [i + 100 for i in students]
+print(students)
+
+students = ["Iron Man", "Thor", "I am Groot"]
+students = [len(i) for i in students]
+print(students)
+
+students = ["Iron Man", "Thor", "I am Groot"]
+students = [i.upper() for i in students]
+print(students)
