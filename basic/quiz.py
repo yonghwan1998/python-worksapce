@@ -73,11 +73,11 @@ for personCount in range(50):
         sumTime += driveTime
         if sumTime > 50:
             sumTime -= driveTime
-            print(f"[]\t{personCount+1}번째 손님 (소요시간 : {driveTime}분)")
+            print(f"[ ] {personCount+1}번째 손님 (소요시간 : {driveTime}분)")
         else:
             count += 1
-            print(f"[O]\t{personCount+1}번째 손님 (소요시간 : {driveTime}분)")
+            print(f"[O] {personCount+1}번째 손님 (소요시간 : {driveTime}분)")
     else:
-        print(f"[]\t{personCount+1}번째 손님 (소요시간 : {driveTime}분)")
+        print(f"[ ] {personCount+1}번째 손님 (소요시간 : {driveTime}분)")
 
 print(f"총 탑승 승객 : {count} 명")
