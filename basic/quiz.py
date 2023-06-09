@@ -59,25 +59,53 @@
 
 # print("================================================")
 
-# Quiz.5
+# # Quiz.5
 
-from random import *
+# from random import *
 
-sumTime = 0
-count = 0
+# sumTime = 0
+# count = 0
 
-for personCount in range(50):
-    driveTime = randint(5, 50)
+# for personCount in range(50):
+#     driveTime = randint(5, 50)
 
-    if 5 <= driveTime <= 15:
-        sumTime += driveTime
-        if sumTime > 50:
-            sumTime -= driveTime
-            print(f"[ ] {personCount+1}번째 손님 (소요시간 : {driveTime}분)")
+#     if 5 <= driveTime <= 15:
+#         sumTime += driveTime
+#         if sumTime > 50:
+#             sumTime -= driveTime
+#             print(f"[ ] {personCount+1}번째 손님 (소요시간 : {driveTime}분)")
+#         else:
+#             count += 1
+#             print(f"[O] {personCount+1}번째 손님 (소요시간 : {driveTime}분)")
+#     else:
+#         print(f"[ ] {personCount+1}번째 손님 (소요시간 : {driveTime}분)")
+
+# print(f"총 탑승 승객 : {count} 명")
+
+# print("================================================")
+
+# Quiz.6
+
+
+def standardWeigt(height, gender):
+    while True:
+        if gender == "male":
+            BMI = int(int(height) * int(height) * 22 * 0.01) / 100
+            print(f"키 {height}cm 남자의 표준 체중은 {BMI}kg 입니다.")
+            break
+        elif gender == "female":
+            BMI = int(int(height) * int(height) * 22 * 0.01) / 100
+            print(f"키 {height}cm 여자의 표준 체중은 {BMI}kg 입니다.")
+            break
         else:
-            count += 1
-            print(f"[O] {personCount+1}번째 손님 (소요시간 : {driveTime}분)")
-    else:
-        print(f"[ ] {personCount+1}번째 손님 (소요시간 : {driveTime}분)")
+            gender = input("남자 : male, 여자 : female 값만 입력해주세요. ")
 
-print(f"총 탑승 승객 : {count} 명")
+
+inputHeight = input("키를 입력해주세요. >> ")
+inputGender = input("남자 : male, 여자 : female 값을 입력해주세요. >> ")
+
+standardWeigt(inputHeight, inputGender)
+
+print("================================================")
+
+# Quiz.7
