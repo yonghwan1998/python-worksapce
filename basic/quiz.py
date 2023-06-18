@@ -86,26 +86,32 @@
 
 # Quiz.6
 
+# def standardWeigt(height, gender):
+#     while True:
+#         if gender == "male":
+#             BMI = int(int(height) * int(height) * 22 * 0.01) / 100
+#             print(f"키 {height}cm 남자의 표준 체중은 {BMI}kg 입니다.")
+#             break
+#         elif gender == "female":
+#             BMI = int(int(height) * int(height) * 22 * 0.01) / 100
+#             print(f"키 {height}cm 여자의 표준 체중은 {BMI}kg 입니다.")
+#             break
+#         else:
+#             gender = input("남자 : male, 여자 : female 값만 입력해주세요. ")
 
-def standardWeigt(height, gender):
-    while True:
-        if gender == "male":
-            BMI = int(int(height) * int(height) * 22 * 0.01) / 100
-            print(f"키 {height}cm 남자의 표준 체중은 {BMI}kg 입니다.")
-            break
-        elif gender == "female":
-            BMI = int(int(height) * int(height) * 22 * 0.01) / 100
-            print(f"키 {height}cm 여자의 표준 체중은 {BMI}kg 입니다.")
-            break
-        else:
-            gender = input("남자 : male, 여자 : female 값만 입력해주세요. ")
 
+# inputHeight = input("키를 입력해주세요. >> ")
+# inputGender = input("남자 : male, 여자 : female 값을 입력해주세요. >> ")
 
-inputHeight = input("키를 입력해주세요. >> ")
-inputGender = input("남자 : male, 여자 : female 값을 입력해주세요. >> ")
+# standardWeigt(inputHeight, inputGender)
 
-standardWeigt(inputHeight, inputGender)
-
-print("================================================")
+# print("================================================")
 
 # Quiz.7
+
+# for i in range(1, 51):
+#     with open(f"{i}주차.txt", "w", encoding="utf8") as report_file:
+#         report_file.write(f" - {i}주차 주간보고 -")
+#         report_file.write(f"\n부서 : ")
+#         report_file.write(f"\n이름 : ")
+#         report_file.write(f"\n업무 요약 : ")
