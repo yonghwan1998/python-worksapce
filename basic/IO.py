@@ -105,6 +105,3 @@ print("================================================")
 #     study_file.write("Studying file")
 with open("study.txt", "r", encoding="utf8") as study_file:
     print(study_file.read())
-
-
-print("================================================")
