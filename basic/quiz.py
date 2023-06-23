@@ -118,37 +118,70 @@
 
 # print("================================================")
 
-# Quiz.7
+# Quiz.8
 
 
-class House:
-    def __init__(self, location, house_type, deal_type, price, completion_year):
-        self.location = location
-        self.house_type = house_type
-        self.deal_type = deal_type
-        self.price = price
-        self.completion_year = completion_year
+# class House:
+#     def __init__(self, location, house_type, deal_type, price, completion_year):
+#         self.location = location
+#         self.house_type = house_type
+#         self.deal_type = deal_type
+#         self.price = price
+#         self.completion_year = completion_year
 
-    def show_detail(self):
-        print(
-            self.location,
-            self.house_type,
-            self.deal_type,
-            self.price,
-            self.completion_year,
-        )
+#     def show_detail(self):
+#         print(
+#             self.location,
+#             self.house_type,
+#             self.deal_type,
+#             self.price,
+#             self.completion_year,
+#         )
 
 
-house1 = House("강남", "아파트", "매매", "10억", "2010년")
-house2 = House("마포", "오피스텔", "전세", "5억", "2007년")
-house3 = House("송파", "빌라", "월세", "500/50", "2000년")
+# house1 = House("강남", "아파트", "매매", "10억", "2010년")
+# house2 = House("마포", "오피스텔", "전세", "5억", "2007년")
+# house3 = House("송파", "빌라", "월세", "500/50", "2000년")
 
-houses = []
-houses.append(house1)
-houses.append(house2)
-houses.append(house3)
+# houses = []
+# houses.append(house1)
+# houses.append(house2)
+# houses.append(house3)
 
-print(f"총 {len(houses)}대의 매물이 있습니다.")
+# print(f"총 {len(houses)}대의 매물이 있습니다.")
 
-for house in houses:
-    house.show_detail()
+# for house in houses:
+#     house.show_detail()
+
+# print("================================================")
+
+
+# Quiz.9
+class SoldOutError(Exception):
+    def __str__(self):
+        msg = "재고가 소진되어 더이상 주문을 받지 않습니다."
+        return msg
+
+
+chicken = 10
+waiting = 1
+while True:
+    try:
+        print(f"[남은 치킨 : {chicken}]")
+        order = int(input("치킨 몇 마리 주문하시겠습니까? "))
+        if order < 1 or (not isinstance(order, int)):
+            raise ValueError
+        elif order > chicken:
+            print("재료가 부족합니다.")
+        else:
+            print(f"[대기번호 {waiting}] {order}마리 주문이 완료됐습니다.")
+            waiting += 1
+            chicken -= order
+            if chicken == 0:
+                raise SoldOutError
+
+    except ValueError:
+        print("잘못된 값을 입력했습니다.")
+    except SoldOutError as err:
+        print(err)
+        break
