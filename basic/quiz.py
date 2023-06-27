@@ -157,31 +157,38 @@
 
 
 # Quiz.9
-class SoldOutError(Exception):
-    def __str__(self):
-        msg = "재고가 소진되어 더이상 주문을 받지 않습니다."
-        return msg
+# class SoldOutError(Exception):
+#     def __str__(self):
+#         msg = "재고가 소진되어 더이상 주문을 받지 않습니다."
+#         return msg
 
 
-chicken = 10
-waiting = 1
-while True:
-    try:
-        print(f"[남은 치킨 : {chicken}]")
-        order = int(input("치킨 몇 마리 주문하시겠습니까? "))
-        if order < 1 or (not isinstance(order, int)):
-            raise ValueError
-        elif order > chicken:
-            print("재료가 부족합니다.")
-        else:
-            print(f"[대기번호 {waiting}] {order}마리 주문이 완료됐습니다.")
-            waiting += 1
-            chicken -= order
-            if chicken == 0:
-                raise SoldOutError
+# chicken = 10
+# waiting = 1
+# while True:
+#     try:
+#         print(f"[남은 치킨 : {chicken}]")
+#         order = int(input("치킨 몇 마리 주문하시겠습니까? "))
+#         if order < 1 or (not isinstance(order, int)):
+#             raise ValueError
+#         elif order > chicken:
+#             print("재료가 부족합니다.")
+#         else:
+#             print(f"[대기번호 {waiting}] {order}마리 주문이 완료됐습니다.")
+#             waiting += 1
+#             chicken -= order
+#             if chicken == 0:
+#                 raise SoldOutError
 
-    except ValueError:
-        print("잘못된 값을 입력했습니다.")
-    except SoldOutError as err:
-        print(err)
-        break
+#     except ValueError:
+#         print("잘못된 값을 입력했습니다.")
+#     except SoldOutError as err:
+#         print(err)
+#         break
+
+# print("================================================")
+
+# Quiz.10
+import byme
+
+byme.sign()
